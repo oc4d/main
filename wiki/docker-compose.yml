@@ -1,0 +1,23 @@
+version: "2"
+services:
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+  wiki:
+    image: synctree/mediawiki
+    ports:
+      - "8080:80"
+    volumes:
+      - ./conf:/var/www-shared/html
+    links:
+      - mysql
+    environment:
+      MYSQL_PORT_3306_TCP: mysql
+      MEDIAWIKI_DB_PASSWORD: root
+      MEDIAWIKI_DB_USER: root
+volumes:
+  mysql-data:
+    external: true
