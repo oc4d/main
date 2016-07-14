@@ -8,6 +8,8 @@ services:
       MYSQL_ROOT_PASSWORD: root
   wiki:
     image: synctree/mediawiki
+    depends_on:
+      - mysql
     ports:
       - "8080:80"
     volumes:
