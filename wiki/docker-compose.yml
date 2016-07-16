@@ -7,7 +7,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
   wiki:
-    image: synctree/mediawiki
+    build: docker-mediawiki
     depends_on:
       - mysql
     ports:
@@ -16,10 +16,6 @@ services:
       - ./conf:/var/www-shared/html
     links:
       - mysql
-    environment:
-      MYSQL_PORT_3306_TCP: mysql
-      MEDIAWIKI_DB_PASSWORD: root
-      MEDIAWIKI_DB_USER: root
 volumes:
   mysql-data:
     external: true
