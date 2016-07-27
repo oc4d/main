@@ -81,7 +81,7 @@ $wgMemCachedServers = array();
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
-$wgEnableUploads = false;
+$wgEnableUploads = true;
 $wgUseImageMagick = true;
 $wgImageMagickConvertCommand = "/usr/bin/convert";
 
@@ -138,4 +138,3 @@ require_once "$IP/skins/Vector/Vector.php";
 
 # End of automatically generated settings.
 # Add more configuration options below.
-
