@@ -16,6 +16,9 @@ services:
       - ./conf:/var/www-shared/html
     links:
       - mysql
+    environment:
+      DOCKER_HOST: $DOCKER_HOST
+
 volumes:
   mysql-data:
     external: true

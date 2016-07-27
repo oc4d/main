@@ -31,7 +31,14 @@ $wgScriptPath = "";
 $wgScriptExtension = ".php";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "http://127.0.0.1:8080";
+$dockerHost = getenv('DOCKER_HOST');
+if (empty($dockerHost)) {
+	$dockerHost = "127.0.0.1";
+} else {
+	$dockerHost = parse_url($dockerHost, PHP_URL_HOST);
+}
+$dockerHost = "http://" . $dockerHost . ":8080";
+$wgServer = $dockerHost;
 
 ## The relative URL path to the skins directory
 $wgStylePath = "$wgScriptPath/skins";
