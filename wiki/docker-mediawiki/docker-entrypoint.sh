@@ -32,10 +32,8 @@ if [ -d "$MEDIAWIKI_SHARED" ]; then
     fi
 fi
 
-# If the assets/oc4d directory does not already exist
-if [ -d "$MEDIAWIKI_SHARED/assets/oc4d" ]; then
-    # remove oc4d folder, this was added to deal with aliasing issue on OSX
-    rm -fr resources/assets/oc4d
+# If the assets/oc4d (sym link) directory does not already exist
+if [ ! "$(ls resources/assets/oc4d)" ]; then
     ln -s "$MEDIAWIKI_SHARED/assets/oc4d" resources/assets/oc4d
 fi
 
