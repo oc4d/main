@@ -33,7 +33,7 @@ if [ -d "$MEDIAWIKI_SHARED" ]; then
 fi
 
 # If the assets/oc4d (sym link) directory does not already exist
-if [ ! "$(ls resources/assets/oc4d)" ]; then
+if [ -d "$MEDIAWIKI_SHARED/assets/oc4d" -a ! -L resources/assets/oc4d ]; then
     ln -s "$MEDIAWIKI_SHARED/assets/oc4d" resources/assets/oc4d
 fi
 
