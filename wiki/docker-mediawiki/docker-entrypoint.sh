@@ -37,9 +37,18 @@ if [ -d "$MEDIAWIKI_SHARED/assets/oc4d" -a ! -L resources/assets/oc4d ]; then
     ln -s "$MEDIAWIKI_SHARED/assets/oc4d" resources/assets/oc4d
 fi
 
-# If the extensions folder (sym link) directory does not already exist
-if [ -d "$MEDIAWIKI_SHARED/extensions" -a ! -L extensions/oc4d ]; then
-    ln -s "$MEDIAWIKI_SHARED/extensions" extensions/oc4d
+# keep the syntax in the commented-out block below, in case we want to build and link our own extensions
+# If the mobile friendly extension directory is not already syn-linked to extensions folder
+# if [ -d "$MEDIAWIKI_SHARED/extensions/MobileFrontend" -a ! -L extensions/MobileFrontend ]; then
+#     ln -s "$MEDIAWIKI_SHARED/extensions/MobileFrontend" extensions
+# fi
+
+# If the MobileFrontend extension has not already been copied to the extensions folder
+if [ ! -d extensions/MobileFrontend ]; then
+    # Download the mobile frontend extension to the extensions folder and name the tar file
+    curl -o extensions/MobileFrontend.tgz https://extdist.wmflabs.org/dist/extensions/MobileFrontend-REL1_27-039b40b.tar.gz
+    # Extract the entire tar file into the extensions folder (the extension is still packed into folder named "MobileFrontend")
+    tar -zxf extensions/MobileFrontend.tgz -C extensions
 fi
 
 
