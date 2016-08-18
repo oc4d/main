@@ -27,6 +27,7 @@ your browser, followed by port 8080. Eg:
     192.168.99.100:8080
 
 ## Initializing the database
+## Note: database should be re-initialized after upgrading MediaWiki
 
 When running the wiki for the first time, you'll have an empty database. If you try to access the site
 when the database is empty, you'll see an error like this:
