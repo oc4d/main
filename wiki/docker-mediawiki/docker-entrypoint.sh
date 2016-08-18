@@ -43,14 +43,14 @@ fi
 #     ln -s "$MEDIAWIKI_SHARED/extensions/MobileFrontend" extensions
 # fi
 
+# Code block below was moved to the Dockerfile, this commented-out code can likely be removed after testing Dockerfile
 # If the MobileFrontend extension has not already been copied to the extensions folder
-if [ ! -d extensions/MobileFrontend ]; then
-    # Download the mobile frontend extension to the extensions folder and name the tar file
-    curl -o extensions/MobileFrontend.tgz https://extdist.wmflabs.org/dist/extensions/MobileFrontend-REL1_27-039b40b.tar.gz
-    # Extract the entire tar file into the extensions folder (the extension is still packed into folder named "MobileFrontend")
-    tar -zxf extensions/MobileFrontend.tgz -C extensions
-fi
-
+# if [ ! -d extensions/MobileFrontend ]; then
+#     # Download the mobile frontend extension to the extensions folder and name the tar file
+#     curl -o extensions/MobileFrontend.tgz https://extdist.wmflabs.org/dist/extensions/MobileFrontend-REL1_27-039b40b.tar.gz
+#     # Extract the entire tar file into the extensions folder (the extension is still packed into folder named "MobileFrontend")
+#     tar -zxf extensions/MobileFrontend.tgz -C extensions
+# fi
 
 chown -R www-data: .
 

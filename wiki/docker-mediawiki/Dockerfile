@@ -40,6 +40,8 @@ RUN MEDIAWIKI_DOWNLOAD_URL="https://releases.wikimedia.org/mediawiki/$MEDIAWIKI_
     && gpg --verify mediawiki.tar.gz.sig \
     && tar -xf mediawiki.tar.gz -C /usr/src/mediawiki --strip-components=1
 
+RUN curl -o MobileFrontend.tgz https://extdist.wmflabs.org/dist/extensions/MobileFrontend-REL1_27-039b40b.tar.gz \
+    && tar -zxf MobileFrontend.tgz -C /usr/src/mediawiki/extensions
 
 COPY apache/mediawiki.conf /etc/apache2/
 RUN echo Include /etc/apache2/mediawiki.conf >> /etc/apache2/apache2.conf
