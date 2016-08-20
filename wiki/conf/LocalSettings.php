@@ -138,3 +138,7 @@ require_once "$IP/skins/Vector/Vector.php";
 
 # End of automatically generated settings.
 # Add more configuration options below.
+
+# Enable mobile friendly extension
+require_once "$IP/extensions/MobileFrontend/MobileFrontend.php";
+$wgMFAutodetectMobileView = true;

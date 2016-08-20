@@ -37,12 +37,6 @@ if [ -d "$MEDIAWIKI_SHARED/assets/oc4d" -a ! -L resources/assets/oc4d ]; then
     ln -s "$MEDIAWIKI_SHARED/assets/oc4d" resources/assets/oc4d
 fi
 
-# If the extensions folder (sym link) directory does not already exist
-if [ -d "$MEDIAWIKI_SHARED/extensions" -a ! -L extensions/oc4d ]; then
-    ln -s "$MEDIAWIKI_SHARED/extensions" extensions/oc4d
-fi
-
-
 chown -R www-data: .
 
 exec "$@"
