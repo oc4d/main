@@ -142,3 +142,18 @@ require_once "$IP/skins/Vector/Vector.php";
 # Enable mobile friendly extension
 require_once "$IP/extensions/MobileFrontend/MobileFrontend.php";
 $wgMFAutodetectMobileView = true;
+
+require_once "$IP/extensions/VisualEditor/VisualEditor.php";
+// Enable by default for everybody
+$wgDefaultUserOptions['visualeditor-enable'] = 1;
+// Don't allow users to disable it
+$wgHiddenPrefs[] = 'visualeditor-enable';
+$wgVirtualRestConfig['modules']['parsoid'] = array(
+  // URL to the Parsoid instance
+  // Use port 8142 if you use the Debian package
+  'url' => 'http://parsoid:8142',
+  // Parsoid "domain", see below (optional)
+  'domain' => 'oc4d.org',
+  // Parsoid "prefix", see below (optional)
+  'prefix' => 'dev'
+);

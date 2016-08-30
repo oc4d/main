@@ -18,7 +18,15 @@ services:
       - mysql
     environment:
       DOCKER_HOST: $DOCKER_HOST
-
+  parsoid:
+    build: docker-parsoid
+    ports:
+      - "8142:8142"
+    volumes:
+      - ./parsoid-data:/data
+    environment:
+        MW_HOST: wiki
+        PORT: 8142
 volumes:
   mysql-data:
     external: true
