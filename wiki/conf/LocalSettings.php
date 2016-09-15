@@ -62,12 +62,12 @@ $wgEmailAuthentication = true;
 ## Database settings
 $wgDBtype = "mysql";
 $wgDBserver = "mysql";
-$wgDBname = "mediawikioc4d";
+$wgDBname = "mediawiki";
 $wgDBuser = "root";
 $wgDBpassword = "root";
 
 # MySQL specific settings
-$wgDBprefix = "oc4d_";
+$wgDBprefix = "";
 
 # MySQL table options to use during installation or update
 $wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
@@ -155,5 +155,4 @@ $wgVirtualRestConfig['modules']['parsoid'] = array(
   // Parsoid "domain", see below (optional)
   'domain' => 'oc4d.org',
   // Parsoid "prefix", see below (optional)
-  'prefix' => 'dev'
-);
+  'prefix' => 'dev');
