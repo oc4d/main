@@ -155,5 +155,4 @@ $wgVirtualRestConfig['modules']['parsoid'] = array(
   // Parsoid "domain", see below (optional)
   'domain' => 'oc4d.org',
   // Parsoid "prefix", see below (optional)
-  'prefix' => 'dev'
-);
+  'prefix' => 'dev');

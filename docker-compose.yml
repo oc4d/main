@@ -7,26 +7,33 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
   wiki:
-    build: docker-mediawiki
+    build: wiki/docker-mediawiki
     depends_on:
       - mysql
     ports:
       - "8080:80"
     volumes:
-      - ./conf:/var/www-shared/html
+      - ./wiki/conf:/var/www-shared/html
     links:
       - mysql
     environment:
       DOCKER_HOST: $DOCKER_HOST
   parsoid:
-    build: docker-parsoid
+    build: wiki/docker-parsoid
     ports:
       - "8142:8142"
     volumes:
-      - ./parsoid-data:/data
+      - ./wiki/parsoid-data:/data
     environment:
         MW_HOST: wiki
         PORT: 8142
+  wordpress:
+    image: wordpress
+    ports: 
+      - 8081:80
+    environment:
+      WORDPRESS_DB_PASSWORD: root
 volumes:
   mysql-data:
     external: true
+
