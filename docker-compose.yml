@@ -29,11 +29,17 @@ services:
         PORT: 8142
   wordpress:
     image: wordpress
-    ports: 
-      - 8081:80
+    ports:
+      - "8081:80"
     environment:
       WORDPRESS_DB_PASSWORD: root
+  nginx:
+    build: nginx
+    ports:
+      - "8090:80"
 volumes:
   mysql-data:
     external: true
+  nginx:
+    external: false
 
