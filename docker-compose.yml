@@ -35,6 +35,8 @@ services:
       WORDPRESS_DB_PASSWORD: root
   nginx:
     build: nginx
+    depends_on:
+      - wiki
     ports:
       - "8090:80"
 volumes:
