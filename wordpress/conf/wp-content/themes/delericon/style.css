@@ -1,0 +1,646 @@
+/*
+Theme Name: Delericon
+Theme URI: http://bcproducties.com/
+Description: A Professional Business Wordpress Template.
+Version: 1.0
+Author: Brent Chesny
+Author URI: http://bcproducties.com/
+Tags: corporate, business, minimal, gray, 3d slider, flash, jquery, lightbox
+*/
+
+@import "style/css/reset.css";
+@import "style/css/typography.css";
+@import "style/css/layout.css";
+/***** General Styles ******/
+
+.clear {
+	clear:both;
+}
+body {
+	font-family:"Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	background:#e2e2e2;
+	font-size:11px;
+	font-weight:normal;
+	color:#4f4f4f;
+}
+.column_medium ul, .column_large ul {
+	list-style-type:disc;
+	margin:0px 0px 20px 40px;
+	font-size:11px;
+	font-weight:normal;
+	color:#4f4f4f;
+	line-height:18px;
+}
+.column_medium ul li, .column_large ul li {
+	list-style-type:disc;
+}
+.column_medium ol, .column_large ol {
+	list-style-type:decimal;
+	margin:0px 0px 20px 40px;
+	font-size:11px;
+	font-weight:normal;
+	color:#4f4f4f;
+	line-height:18px;
+}
+.column_medium ol li, .column_large ol li {
+	list-style-type:decimal;
+}
+blockquote {
+	margin-left:20px;
+	border-left:3px solid #999;
+	font-size:11px;
+	font-weight:normal;
+	color:#4f4f4f;
+	margin-bottom:25px;
+	line-height:18px;
+	padding-left:10px;
+	font-style:italic;
+}
+p {
+	font-family:"Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	color:#4f4f4f;
+	margin-bottom:25px;
+	line-height:24px;
+}
+h1 {
+	font-size:24px;
+	font-weight:normal;
+	color:#4f4f4f;
+	margin-bottom:20px;
+	line-height:36px;
+}
+h1 small {
+	font-size:20px;
+	display:block;
+}
+h2 {
+	font-size:22px;
+	font-weight:normal;
+	color:#a40d0d;
+	margin-bottom:5px;
+}
+h3 {
+	font-size:18px;
+	font-weight:normal;
+	color:#a40d0d;
+	margin-bottom:0px;
+}
+h4 {
+	font-size:11px;
+	color:#4f4f4f;
+	line-height:18px;
+}
+h5 {
+	font-size:10px;
+	font-weight:normal;
+	color:#4f4f4f;
+	margin-bottom:10px;
+}
+h6 {
+	font-size:8px;
+	font-weight:normal;
+	color:#4f4f4f;
+	margin-bottom:10px;
+}
+a:link, a:active, a:visited {
+	font-family:"Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	color:#a40d0d;
+	line-height:18px;
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+}
+.alignleft {
+	float:left;
+	margin:10px 15px 10px 0px;
+}
+.alignright {
+	float:right;
+	margin:10px 0px 10px 15px;
+}
+/***** Header Styles ******/
+
+#header-wrap {
+	margin:0px auto;
+	width:900px;
+	padding:0px 30px 0px 30px;
+}
+#header {
+	width:880px;
+	height:140px;
+	padding:0 10px 10px 10px;
+	border-bottom:1px solid #cdcdcd;
+}
+#logo {
+	width:300px;
+	float:left;
+	margin:5px 0px;
+}
+/***** Navigation Styles *****/
+
+#nav {
+	float:right;
+	list-style-type: none;
+	margin-right:20px;
+	position:relative;
+	right:-27px;
+	top:110px;
+	outline:none;
+}
+#nav li {
+	float:left;
+}
+#nav li a:link, #nav li a:active, #nav li a:visited {
+	display:block;
+	text-decoration: none;
+	text-align:right;
+	font-size: 16px;
+	color:#4f4f4f;
+	margin:0px 15px;
+}
+#nav li a:hover, #nav li.current_page_item a {
+	color:#a40d0d;
+}
+/***** Featured Area Styles ******/
+
+#featured {
+	width:900px;
+	margin:15px auto 0px auto;
+	padding-bottom:15px;
+	border-bottom:1px solid #cdcdcd;
+}
+#featured-alt {
+	width:900px;
+	height:350px;
+	margin:15px auto 0px auto;
+	padding-bottom:15px;
+	border-bottom:1px solid #cdcdcd;
+}
+#featured-alt ul {
+	list-style:none;
+	margin:0;
+}
+/***** Main Content Styles ******/
+
+#main {
+	margin:25px auto 0px auto;
+	width:875px;
+	padding:0px 12px;
+	overflow:hidden;
+}
+#main img {
+	padding:5px;
+	border:1px solid #cdcdcd;
+}
+#tagline-center {
+	width:900px;
+	margin:0 auto;
+	padding:10px 0px;
+	text-align:center;
+	border-bottom:1px solid #cdcdcd;
+}
+#tagline-right {
+	width:900px;
+	margin:0 auto;
+	padding:10px 0px;
+	text-align:right;
+	border-bottom:1px solid #cdcdcd;
+}
+#tagline-center h1, #tagline-right h1 {
+	margin:0;
+}
+.cufon {
+	margin:3px 0px;
+!important       /* Tagline Line-Height Fix For Cufon Font Replacement */
+ outline:0;
+}
+.column_small {
+	width:270px;
+	border-right:1px solid #d4d7dd;
+	padding-right:15px;
+	float:left;
+	margin-right:15px;
+}
+.column_medium {
+	width:570px;
+	border-right:1px solid #d4d7dd;
+	padding-right:15px;
+	float:left;
+	margin-right:15px;
+	padding-bottom:0;
+}
+.column_large {
+	width:875px;
+	float:left;
+}
+.column_last {
+	border-right:0;
+	margin-right:0;
+	padding-right:0;
+}
+.service {
+	width:900px;
+	clear:both;
+	margin-bottom:25px;
+	overflow:hidden;
+}
+.service .image {
+	float:left;
+	width:320px;
+}
+.service .description {
+	float:left;
+	width:540px;
+	padding:0px 20px
+}
+.service p {
+	margin-bottom:0px;
+}
+.visit_portfolio:link, .visit_portfolio:active, .visit_portfolio:visited, .visit_portfolio:hover {
+	font-family:"Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	padding:3px 7px;
+	border:1px solid #cdcdcd;
+	float:right;
+	color:#4f4f4f;
+	margin-right:15px;
+}
+#blog_entries .excerpt {
+	margin-bottom:25px;
+	border-bottom:1px solid #cdcdcd;
+}
+#blog_entries_last {
+	margin-bottom:0;
+}
+.excerpt h1 {
+	margin-bottom:5px;
+}
+.excerpt h1 a:link, .excerpt h1 a:active, .excerpt h1 a:visited {
+	font-size:24px;
+	font-weight:normal;
+	color:#404040;
+	line-height:24px;
+}
+.excerpt h1 a:hover {
+	color:#a40d0d;
+	text-decoration:none;
+}
+.excerpt .snippet {
+	font-size:11px;
+	font-weight:normal;
+	color:#404040;
+	margin-bottom:25px;
+	line-height:22px;
+}
+.excerpt .snippet img {
+	float:left;
+	margin:0px 15px 0px 0px;
+}
+.excerpt .meta, .excerpt .meta a {
+	font-size:10px;
+	margin-bottom:10px;
+}
+.excerpt {
+	margin-bottom:25px;
+}
+h2#comments {
+	margin-bottom:25px;
+}
+.commentlist {
+	list-style:none;
+	margin-left:0;
+}
+.commentlist li {
+	width:560px;
+}
+.commentlist li .comment_left {
+	float:left;
+	width:80px;
+	text-align:center;
+	margin-right:12px;
+}
+.commentlist li .comment_left img {
+	margin-bottom:10px;
+}
+.commentlist li .comment_right {
+	float:left;
+	width:465px;
+	margin-bottom:20px;
+}
+.commentlist li .comment_right .comment_meta {
+	height:20px;
+}
+.commentlist li .comment_right .name {
+	float:left;
+	width:180px;
+}
+.commentlist li .comment_right .name span {
+	color:#a40d0d;
+}
+.commentlist li .comment_right .date {
+	float:right;
+	width:200px;
+	text-align:right;
+	color:#a40d0d;
+}
+#respond h2 {
+	margin:0;
+}
+.pagination a:link, .pagination a:active, .pagination a:visited {
+	background:#ffffff;
+	border:1px solid #cdcdcd;
+	padding:4px 8px;
+	color:#a40d0d;
+	display:block;
+}
+.pagination a:hover {
+	background:#a40d0d;
+	color:#eaeaea;
+	text-decoration:none;
+	border:1px solid #cdcdcd;
+	padding:4px 8px;
+}
+.business-details {
+	margin-top:15px;
+}
+.business-details p {
+	margin-bottom:5px;
+}
+/**** Form Styles ****/
+
+input#name, input#email, input#url, input#author {
+	background:#ffffff;
+	border:1px solid #cdcdcd;
+	padding:4px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:11px;
+	width:200px;
+}
+input#s {
+	background:#ffffff;
+	border:1px solid #cdcdcd;
+	padding:4px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:11px;
+	width:180px;
+}
+input#submit, input#searchsubmit {
+	background:#ffffff;
+	border:1px solid #cdcdcd;
+	padding:3px 6px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:11px;
+	color:#a40d0d;
+}
+input#submit:hover, input#searchsubmit:hover {
+	background:#a40d0d;
+	border:1px solid #cdcdcd;
+	padding:3px 6px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:11px;
+	color:#eaeaea;
+	cursor:pointer;
+}
+label {
+	margin:10px;
+}
+textarea#comment, textarea#message {
+	background:#ffffff;
+	border:1px solid #cdcdcd;
+	padding:4px;
+	width:500px;
+	height:150px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:11px;
+}
+#commentform {
+	margin-left: 15px;
+}
+/***** Portfolio Styles ****/
+
+.portfolio {
+	margin:0;
+}
+.portfolio .entry {
+	width:282px;
+	float:left;
+	margin:0px 0px 0px 9px;
+}
+.portfolio .wrapper {
+	width:875px;
+	float:left;
+	clear:both;
+}
+.portfolio .entry img {
+	margin:5px 0px;
+}
+.portfolio .entry h2 a:link, .portfolio .entry h2 a:active, .portfolio .entry h2 a:visited {
+	font-size:20px;
+	font-weight:normal;
+	color:#404040;
+	margin-bottom:5px;
+}
+.portfolio .entry h2 a:hover {
+	color:#a40d0d;
+	margin-bottom:15px;
+	text-decoration:none;
+}
+/****** Sub Navigation Styles *****/
+
+ul.subnav {
+	list-style:none;
+	margin:15px 0px 25px 0px;
+}
+ul.subnav li {
+	border-top:1px solid #d4d7dd;
+	width:270px;
+	padding:0px;
+	margin:0;
+}
+ul.subnav li:last-child {
+	border-bottom:1px solid #d4d7dd;
+}
+ul.subnav li a:link, ul.subnav li a:active, ul.subnav li a:visited {
+	text-decoration:none;
+	color:#414141;
+	width:255px;
+	display:block;
+	padding:5px 5px 5px 10px;
+	margin:0;
+}
+ul.subnav li a:hover {
+	background:#fafafa;
+	color:#a40d0d;
+}
+ul.subnav li.current_page_item a {
+	width:252px;
+	border-left:3px solid #a40d0d;
+	color:#a40d0d;
+}
+/***** Adblock Styles *****/
+
+ul.adblock {
+	margin:20px 0px 20px 0px;
+}
+ul.adblock li {
+	display:inline;
+}
+#main ul.adblock li img {
+	padding:0px;
+	border:0px;
+	margin:3px;
+	opacity:1;
+}
+#main ul.adblock li img:hover {
+	opacity:0.8;
+}
+/***** Footer Styles ******/
+
+#footer {
+	font-family:"Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	width:900px;
+	margin:20px auto 0px auto;
+	height:10px;
+	padding:15px 0px;
+	color:#4f4f4f;
+	border-top:1px solid #cdcdcd;
+}
+#copyright {
+	font-size:10px;
+	font-weight:normal;
+	width:450px;
+	float:left;
+}
+#footer_navigation {
+	list-style:none;
+	width:450px;
+	float:right;
+	margin:-5px;
+	padding:0px;
+	text-align:right;
+}
+#footer_navigation li {
+	display:inline;
+	padding:0px;
+}
+#footer_navigation li a:link, #footer_navigation li a:active, #footer_navigation li a:visited {
+	text-decoration:none;
+	margin:0px 5px;
+	font-size:10px;
+	padding:0px;
+	color:#4f4f4f;
+}
+#footer_navigation li a:hover {
+	color:#a40d0d;
+}
+/******* Widget Styles *******/
+
+.widget_recent_entries ul, .widget_categories ul, .widget_archive ul, .widget_meta ul, .blogroll {
+	list-style:none;
+	margin:15px 0px 25px 0px;
+}
+.widget_recent_entries ul li, .widget_categories ul li, .widget_archive ul li, .widget_meta ul li, .blogroll li {
+	border-top:1px solid #d4d7dd;
+	width:270px;
+	padding:0px;
+	margin:0;
+}
+.widget_recent_entries ul li:last-child, .widget_categories ul li:last-child, .widget_archive ul li:last-child, .widget_meta ul li:last-child, .blogroll li:last-child {
+	border-bottom:1px solid #d4d7dd;
+}
+.widget_recent_entries ul li a:link, .widget_recent_entries ul li a:active, .widget_recent_entries ul li a:visited, .widget_categories ul li a:link, .widget_categories ul li a:active, .widget_categories ul li a:visited, .widget_archive ul li a:link, .widget_archive ul li a:active, .widget_archive ul li a:visited, .widget_meta ul li a:link, .widget_meta ul li a:active, .widget_meta ul li a:visited, .blogroll li a:link, .blogroll li a:active, .blogroll li a:visited {
+	text-decoration:none;
+	color:#414141;
+	width:255px;
+	display:block;
+	padding:5px 5px 5px 10px;
+	margin:0;
+}
+.widget_recent_entries ul li a:hover, .widget_categories ul li a:hover, .widget_archive ul li a:hover, .widget_meta ul li a:hover, .blogroll li a:hover {
+	background:#fafafa;
+	color:#a40d0d;
+}
+.widget_search {
+	margin-bottom:25px;
+}
+.widget_search label {
+	display:none;
+}
+.widget_pages ul {
+	list-style:none;
+	margin:15px 0px 25px 0px;
+}
+.widget_pages ul li {
+	border-top:1px solid #d4d7dd;
+	width:270px;
+	padding:0px;
+	margin:0;
+}
+.widget_pages ul li:last-child {
+	border-bottom:1px solid #d4d7dd;
+}
+.widget_pages ul ul li:last-child {
+	border-bottom:none;
+}
+.widget_pages ul li a:link, .widget_pages ul li a:active, .widget_pages ul li a:visited {
+	text-decoration:none;
+	color:#414141;
+	width:255px;
+	display:block;
+	padding:5px 5px 5px 10px;
+	margin:0;
+}
+.widget_pages ul li a:hover {
+	background:#fafafa;
+	color:#a40d0d;
+}
+.widget_pages ul li.current_page_parent a {
+	width:252px;
+	border-left:3px solid #a40d0d;
+	color:#a40d0d;
+}
+.widget_pages ul ul {
+	margin:0;
+}
+.widget_pages ul ul li a:link, .widget_pages ul ul li a:active, .widget_pages ul ul li a:visited {
+	text-decoration:none;
+	color:#414141;
+	width:240px;
+	display:block;
+	padding:5px 5px 5px 25px;
+	margin:0;
+}
+.widget_recent_comments ul {
+	list-style:none;
+	margin:15px 0px 25px 0px;
+}
+.widget_recent_comments ul li {
+	border-top:1px solid #d4d7dd;
+	width:270px;
+	padding:0px;
+	margin:0;
+}
+.widget_recent_comments ul li:last-child {
+	border-bottom:1px solid #d4d7dd;
+}
+.widget_recent_comments ul li a:link, .widget_recent_comments ul li a:active, .widget_recent_comments ul li a:visited {
+	text-decoration:none;
+	padding:5px 5px 5px 10px;
+	margin:0;
+	color:a40d0d;
+	display:block;
+}
+.widget_recent_comments ul li a:hover {
+	text-decoration:underline;
+	color:#a40d0d;
+}
+.widget_tag_cloud div a {
+	padding:3px;
+	border:1px solid #cdcdcd;
+	margin:5px;
+	line-height:30px;
+}

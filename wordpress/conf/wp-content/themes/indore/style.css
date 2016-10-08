@@ -1,0 +1,625 @@
+/*
+Theme name: Indore
+Theme URI:http://preuro.eu/indore-theme/
+Description: A two-columned wordpress theme with customizable header. Fixed-width, two columns and two dynamic sidebars, widget ready theme.
+Tags: light, white, fixed-width, three-columns, sticky-post, custom-header
+Author: Stratus
+Author URI:http://preuro.eu/
+Version: 1.0.1
+
+*/
+a img {border: none;}
+
+img {border: none;}
+
+ol, ul {
+list-style: none;
+}
+
+body {Helvetica, Tahoma, Arial,sans-serif
+	font-size: 10px;
+	font-family: 'Helvetica', Tahoma, Arial,sans-serif;
+	background-image: url(images/bg.jpg);
+	color: #666666;
+	margin: 0;
+	padding: 0;	
+	text-align:right;
+	
+}
+
+.right {
+	text-align:right;
+}
+.alignleft{
+	float:left;
+	margin-right:5px;
+}
+.alignright{
+	float:right;
+	margin-left:5px;
+}
+.center, .aligncenter{
+	margin:auto;
+	text-align:center;
+}
+.clear {
+	clear:both;
+}
+/* Main style of links */
+a:link,a:visited{
+	color:#5C6FA3;
+	text-decoration:none;
+}	
+a:hover, a:active{
+	color: #990000;
+	
+}
+/* Top and bottom areas */
+
+.menu {
+	text-transform:uppercase;
+	width:850px;
+	height:10px;
+	padding:10px;
+	text-align: right;
+	
+}
+
+.menu li {
+    float:left;
+	
+}
+
+.menu li.last {
+    background:none;
+	
+}
+
+.menu a {
+    color:#000;
+    font-weight:bold;
+    padding:0 12px;
+    display:block;
+    line-height:2.2;
+	text-align: center;
+}
+
+.menu a:hover {
+	color:#fff;	
+    text-decoration:none;
+	background-color:#990000;
+}
+
+
+
+
+
+
+#top{
+	
+	height:0px;
+	width:100%;
+}
+#bottom{
+	height:52px;
+	width:100%;
+}
+/* The width and style of the actual blog area */
+#page {
+	background: #f9f9f9;
+	
+	width: 850px;	
+	margin:0 auto;	
+	padding:0 4px 0 2px;
+}
+/* Headers used within the blogposts (h1-h3 are used elsewhere on the pages and should not be used in posts)*/
+h4,h5,h6{
+font-size:12px;
+	font-family: Helvetica, Tahoma, Arial,sans-serif
+}
+h4 {font-size: 10px;}
+/* Deal with the header */
+#header{
+	margin:0px;
+	padding:0px;	
+	width:100%;
+	text-align:left;	
+}
+#header h1{
+	margin: 10px 20px 20px 0;	
+	font-size:26px;
+	text-transform:uppercase;	
+	font-family: Arial, Helvetica, sans-serif;
+}
+#header h1 a:link, #header h1 a:visited {
+	color: #000000;	
+	text-decoration:none;
+}
+#header h1 a:hover, #header h1 a:active {
+	color: #990000;
+	font-weight:bold;	
+	
+}
+#header .description{
+	color: #cccccc;	
+	font-weight:bold;	
+	font-style: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 0 50px 0 0;
+}
+#header_right{	
+	float:right;	
+	width:500px;	
+	height:45px;	
+	border:0px;	
+	text-align:right;	
+	padding-right:10px;	
+}
+html>body #header_right{
+}
+#header-right{
+	float:right;	
+	width:325px;	
+	margin:0px;	
+	padding:0px;
+}
+#header-right p{
+	text-align:justify;	
+	margin:0px;	
+	padding:0 10px 0 0;
+}
+fieldset{
+	border:0px;	
+	margin:0px;	
+	padding:10px 0 0px 0;
+}
+#search{border:none;}
+.search{border:0px;}
+#srcinput {
+	font-size:12px;
+	width:145px;	
+	margin: 1px 0px;	
+	border: 1px;	
+	background:#eeeeee;	
+	padding: 2px;	
+	border-color:#f2f2f2;	
+	border-style:solid;
+}
+#srcbutton{
+	font-size:12px;
+	margin: auto 0px;	
+	border-width:1px;	
+	background: #f2f2f2;	
+	padding: 1px 2px;	
+	border:solid 1px #CCCCCC;
+}
+
+.srcform{
+border:no;}
+.srcinput {
+	font-size:9px;
+	width:140px;	
+	margin: 1px 0px;	
+	border: 1px;	
+	background:#eeeeee;	
+	padding: 2px;	
+	border-color:#eeeeee;	
+	border-style:solid;
+}
+.srcbutton{
+	font-size:9px;
+	margin: auto 0px;	
+	border:1px solid #FFFFFF;	
+	background: #f2f2f2;	
+	padding: 1px 2px;	
+	
+}
+
+
+#header-right #search{margin-top:13px;}
+/* Using header right as a dynamic sidebar requires these as well */
+#header-right h2{
+		
+	font-size:5px;
+}
+/* Deal with left, right and bottom sidebars */
+#sidebar-right{
+background-color:#999999;
+	float: left;		
+	margin:10px 0px 0px 2px;	
+	width:240px;	
+	padding:0px 7px 2px 7px;
+	font-size:11px;
+	font-weight:400;
+	border-bottom:thick #CCCCCC;
+	text-transform:uppercase;
+}
+#sidebar-left{
+font:Arial, Helvetica, sans-serif;
+color:#CCCCCC;
+font-size:14px;
+text-transform:lowercase;
+font-weight:bolder;
+	float:left;	
+	margin:10px 2px 0px 0;	
+	width:210px;	
+	padding:2px 7px 2px 15px;
+}
+#sidebar-bottom {
+	background-color:#999999;
+	border-top: 1px solid  #999999;	
+	padding-top: 3px;	
+	margin:5px auto;
+}
+#sidebar-bottom .widget_bottom  {
+	background-color: #CCCCCC;
+	float:left;	
+	list-style-type:none;	
+	text-align:center;	
+	margin:0 10px;	
+	display:inline;	
+	width:191px; 
+}
+#sidebar-right a:link,
+#sidebar-left a:link,
+#sidebar-bottom a:link,
+#sidebar-right a:visited,
+#sidebar-left a:visited,
+#sidebar-bottom a:visited{
+	color:#fff;
+	font-size:12px;
+	font-weight:bolder;
+	text-transform:uppercase;
+}
+#sidebar-right a:hover,
+#sidebar-left a:hover,
+#sidebar-bottom a:hover,
+#sidebar-right a:active,
+#sidebar-left a:active,
+#sidebar-bottom a:active{
+	color:#fff;	
+	text-decoration: none;
+}
+#sidebar-right ul,
+#sidebar-left ul{
+	list-style-type: none;	
+	margin:0;	
+	padding:0;	
+	text-align:left;
+}
+#sidebar-bottom ul{
+background-color:#999999;
+	list-style-type: none;	
+	margin:0;	
+	padding:0;	
+	text-align:left;
+}
+#sidebar-right li li,
+#sidebar-left li li,
+#sidebar-bottom li li {
+background-color:#999999;
+	margin:1px 0;	
+	padding:4px 1px 3px 5px;
+}
+#sidebar-right li li:hover,
+#sidebar-left li li:hover,
+#sidebar-bottom li li:hover {
+	color:#fff;
+	font-weight:700;		
+	background:#990000;		
+}
+#sidebar-right .current_page_item,
+#sidebar-left .current_page_item,
+#sidebar-bottom .current_page_item,
+#sidebar-right .current-cat,
+#sidebar-left .current-cat,
+#sidebar-bottom .current-cat{
+	background-color:#999999;
+}
+#sidebar-right h2,
+#sidebar-left h2,
+#sidebar-bottom h2{
+	text-align:left;
+	padding:0 0 4px 4px;	
+	color:#676767;	
+	font-size:15px;
+	text-transform: uppercase;	
+	font-family: Arial, Georgia, Serif;
+	font-weight:bold;
+	border-bottom:#CCCCCC solid 1px;
+}
+#sidebar-right p,#sidebar-left p{
+	font-size:12px;	text-align:center;	
+	font-weight:bold;
+}
+/* Show calendar in bottom sidebar */
+#calendar-bottom table{
+	margin:auto;
+	width:90%;
+}
+#calendar-bottom a:link,
+#calendar-bottom a:visited {
+	font-weight:bold;
+	color:#5C6FA3;
+}
+#calendar-bottom a:hover,
+#calendar-bottom a:active{
+	color:#283d5a;	
+	text-decoration:none;
+}
+#calendar-bottom #today {
+	background:#F3F0F6;
+}
+
+.divider{
+	height:5px;	
+	padding:0;		
+	margin:0;
+}
+.border_hr_thin{
+	height:13px;	
+	width:100%;		
+	margin:auto;
+}
+/* Deal with content (all styles used in index.php) */
+#content {
+	text-align:left;	
+	width:570px;	
+	padding:5px 10px;		
+	float:left;		
+	margin-top:5px;	
+	min-height:570px;	
+	
+	border-left:1px solid #e1e0e0;
+}
+html>body #content{width:570px;}
+#content h1{
+	margin: 10px 0 10px 0;	
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	text-shadow:#999999;	
+	font-size:20px;
+}
+#content h2{
+	margin: 10px 0 10px 0;	
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	text-shadow:#999999;	
+	font-size:15px;
+}
+#content h2.postheader{	margin: 10px 0 1px 0;}
+#content h4.{margin: 14px 0 1px 0;
+text-transform: uppercase;}
+#content h2 a:link, #content h2 a:visited {
+	color: #336699;
+	text-decoration:none;
+}
+#content h2 a:hover, {
+	color: #fff;
+	background-color:#990000;
+	padding:3px 10px 3px 10px;
+}
+#content .post-info{
+	font-size:10px;	
+	font-variant: normal;
+}
+#content .widgettitle{
+	font-size:10px;	
+	font-weight:bold;	
+	margin: 5px 0 2px 0;
+}
+#content blockquote{
+	padding:10px;	
+	margin:10px 20px;	
+	color: #6C5B7E;
+	border:#666666 solid 1px;
+}
+#content q {
+	quotes: '"' '"' "'" "'";	
+	color: #6C5B7E;
+}
+#content cite { color: #6C5B7E;}
+#content .css{ color:#3A80FF;}
+#content .php{ color:#3E6E3E;}
+#content .entry {
+	text-align:justify;	
+	margin: 5px 7px;
+}
+#content .entry ul, #content .entry ol{
+	margin: 3px;	
+	padding:0 0 0 25px;
+}
+#content .postmetadata{font-size: 10px;}
+#content .post{
+	margin: 0 0 20px 0;
+	padding: 1px 10px 0 10px;
+}
+#content .sticky {
+border-bottom: #666666 solid 3px;} 
+#content .wp-caption, .caption{
+	border:thin solid #676767;	
+	background-color: #F3F0F6;	
+	padding: 5px 2px;	
+	-moz-border-radius: 3px;	
+	-khtml-border-radius: 3px;	
+	-webkit-border-radius: 3px;	
+	border-radius: 3px;
+}
+#content .wp-caption{ text-align:center;}
+#content img,
+#content a img {border: none; padding:5px;}
+
+#content .wp-smiley{border:0 !important;}
+#content .wp-caption-text{
+	margin:2px;	
+	padding:5px 3px 0px 3px;
+}
+#content .not-found{color:#676767;}
+#content .search{margin-top:15px;}
+#content .search fieldset{border:0;}
+dl,dt,dd{margin:0 10px;}
+dt{
+	font-weight:bold;	
+	padding:6px 0 0 0;
+}
+.navigation .alignleft,
+.navigation .alignright{
+	width:222px;
+	min-height:21px;
+	padding:10px 0 10px 0;
+}
+.navigation .alignright{
+	text-align:right;
+}
+/* Special styles used by image.php to show an image attachment */
+.attachment{
+	text-align:center;	
+	margin:0 auto;
+}
+.caption{
+	width:310px;	
+	margin:15px auto;	
+}
+.attachment p {
+	padding:0;	
+	margin:7px auto 2px auto;
+}
+/* Special styles used by archives.php (archives page) */
+.archive{
+	width:200px;	
+	padding: 2px 20px;
+}
+/* Special styles used by links.php (links page) */
+.archive{padding: 2px 20px;}
+/* Special styles used by children.php */
+#list-subpages{
+	margin:0 10px;
+}
+#list-subpages ul{
+	list-style-type:none;
+	margin:3px 15px;
+	padding:0px;
+}
+#list-subpages ul li {
+	margin:15px 0;
+}
+.page-link{
+	font-variant:small-caps;
+	font-size:14px;
+	font-family: Georgia, Serif;
+}
+#list-subpages p {
+	margin:4px 10px;
+	padding:0;
+}
+/* Styles needed to handle comments */
+.xoxo,.children{
+	list-style-type:none;	
+	margin:4px;	
+	padding:0 0 0 10px;
+}
+.children{margin:1px 4px;}
+#respond h3,#content h3 {
+		
+	font-family: Arial, Helvetica, sans-serif;	
+	font-size:13px;	
+	margin: 10px 0 2px 0;
+}
+#commentform textarea{
+	width:99%;	
+	background:#fff;	
+	border: 1px;	
+	background:#fff;	
+	padding: 2px;	
+	border-color:#cccccc;	
+	border-style:solid;
+}
+#comments ul {
+	list-style-type:none;	
+	list-style-position:inside;	
+	margin:0;	
+	padding:5px;
+}
+#comments li {border:1px solid #999999;}
+#comments .children{padding:0 0 0 25px;}
+#comments blockquote{	
+	padding-left:10px;	
+	margin:10px 60px;
+}
+#comments blockquote blockquote{margin:10px 20px;}
+#comments blockquote p {
+	padding:0;
+	margin:0;
+}
+#comments #author-info img {
+	float:left;	
+	margin-right:7px;
+}
+#comments #author-info {font-size:11px;}
+#comments p,#comments .reply {
+	font-size:12px;	
+	margin-left:42px;
+}
+#comments .reply {margin-bottom:10px;}
+#comments .comment,
+#comments .trackback,
+#comments .pingback {
+	padding:5px;	
+	margin:5px 0;
+}
+.thread-odd, .depth-1, .depth-4{background:#f2f2f2;}
+.depth-2, .depth-5 {background:#fff;}
+.thread-even, .depth-3, .depth-6{background:#cccccc;}
+.children .alt, .children .odd {background:#E0DAE6;}
+.children .even {background:#C6BDCE;}
+/* Shows info about comment status */
+#comments-status {
+	margin: 10px auto;
+	padding:15px 0 15px 0;
+	background-color:#f2f2f2;	
+	text-align:right;	
+	font-size:11px;
+}
+#comments-status a:link,#comments-status a:visited{font-weight:bold;}
+#commentform #submit{
+	margin: 5px 0px;	
+	border-width:1px;	
+	background: #f2f2f2;	
+	padding: 1px 4px;	
+	border-color:#cccccc;	
+	border-style:solid;
+}
+
+#author{
+border: 1px solid #CCCCCC;}
+
+#email{
+border: 1px solid #CCCCCC;}
+
+#url{
+border: 1px solid #CCCCCC;}
+
+
+
+#footer{
+	background-color:#f2f2f2;
+	text-align:right;	
+	font-size:11px;
+}
+#theme-author{
+	padding:0;	
+	margin:5px 0 0 0;
+	text-align:right;
+}
+
+.pre {
+width:100;
+}
+
+a img {
+	border: none;
+}
+
+img{
+padding:10px;
+border:none;}

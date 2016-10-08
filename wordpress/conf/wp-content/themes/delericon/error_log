@@ -1,0 +1,58 @@
+[10-May-2012 20:45:19] PHP Fatal error:  Call to undefined function  get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[27-Nov-2012 14:01:03] PHP Fatal error:  Call to undefined function  get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[18-Feb-2013 20:19:35] PHP Fatal error:  Call to undefined function  get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[18-Feb-2013 20:19:36] PHP Fatal error:  Call to undefined function  get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[04-Jun-2013 04:13:58] PHP Fatal error:  Call to undefined function  get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[01-Dec-2013 07:38:19] PHP Fatal error:  Call to undefined function  get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[01-Feb-2014 04:04:38] PHP Fatal error:  Call to undefined function  get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[05-Oct-2014 21:24:32] PHP Fatal error:  Call to undefined function  get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[02-Mar-2015 00:06:31] PHP Fatal error:  Call to undefined function  get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[11-May-2015 19:34:32] PHP Fatal error:  Call to undefined function  get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[26-May-2015 01:26:19] PHP Fatal error:  Call to undefined function  get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[19-Jul-2015 08:30:32] PHP Fatal error:  Call to undefined function  get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/404.php on line 1
+[26-Jul-2015 20:09:20] PHP Fatal error:  Call to undefined function  get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/404.php on line 1
+[17-Oct-2015 02:49:08] PHP Fatal error:  Call to undefined function  get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/404.php on line 1
+[21-Dec-2015 13:54:09] PHP Fatal error:  Call to undefined function  get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[29-Jan-2016 01:36:37 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[02-Feb-2016 22:15:15 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[03-Feb-2016 04:07:57 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[03-Feb-2016 10:57:10 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[03-Feb-2016 16:45:54 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[03-Feb-2016 22:34:08 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[24-Feb-2016 16:23:27 America/Denver] PHP Notice:  Undefined index: to in /home2/ocfoudor/public_html/wp-content/themes/delericon/mail.php on line 3
+[24-Feb-2016 16:23:27 America/Denver] PHP Notice:  Undefined index: name in /home2/ocfoudor/public_html/wp-content/themes/delericon/mail.php on line 7
+[24-Feb-2016 16:23:27 America/Denver] PHP Notice:  Undefined index: email in /home2/ocfoudor/public_html/wp-content/themes/delericon/mail.php on line 8
+[24-Feb-2016 16:23:27 America/Denver] PHP Notice:  Undefined index: message in /home2/ocfoudor/public_html/wp-content/themes/delericon/mail.php on line 16
+[29-Feb-2016 15:38:47 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home2/ocfoudor/public_html/wp-content/themes/delericon/header.php on line 3
+[29-Feb-2016 15:38:47 America/Denver] PHP Fatal error:  Call to undefined function bloginfo() in /home2/ocfoudor/public_html/wp-content/themes/delericon/header.php on line 10
+[29-Feb-2016 15:38:47 America/Denver] PHP Fatal error:  Call to undefined function automatic_feed_links() in /home2/ocfoudor/public_html/wp-content/themes/delericon/functions.php on line 2
+[29-Feb-2016 15:38:47 America/Denver] PHP Fatal error:  Call to undefined function get_option() in /home2/ocfoudor/public_html/wp-content/themes/delericon/footer.php on line 3
+[29-Feb-2016 15:38:49 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/archive.php on line 1
+[29-Feb-2016 15:38:49 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/404.php on line 1
+[13-Mar-2016 11:44:26 America/Denver] PHP Fatal error:  Call to undefined function automatic_feed_links() in /home2/ocfoudor/public_html/wp-content/themes/delericon/functions.php on line 2
+[13-Mar-2016 11:44:27 America/Denver] PHP Fatal error:  Call to undefined function get_option() in /home2/ocfoudor/public_html/wp-content/themes/delericon/footer.php on line 3
+[13-Mar-2016 12:54:50 America/Denver] PHP Fatal error:  Call to undefined function automatic_feed_links() in /home2/ocfoudor/public_html/wp-content/themes/delericon/functions.php on line 2
+[13-Mar-2016 12:54:51 America/Denver] PHP Fatal error:  Call to undefined function get_option() in /home2/ocfoudor/public_html/wp-content/themes/delericon/footer.php on line 3
+[25-Mar-2016 18:37:36 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[26-Mar-2016 05:02:46 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[26-Mar-2016 18:36:39 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[21-May-2016 19:34:54 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/404.php on line 1
+[22-May-2016 15:15:22 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/404.php on line 1
+[04-Jun-2016 18:00:05 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/404.php on line 1
+[07-Jul-2016 18:18:42 America/Denver] PHP Fatal error:  Call to undefined function automatic_feed_links() in /home2/ocfoudor/public_html/wp-content/themes/delericon/functions.php on line 2
+[07-Jul-2016 21:26:52 America/Denver] PHP Fatal error:  Call to undefined function automatic_feed_links() in /home2/ocfoudor/public_html/wp-content/themes/delericon/functions.php on line 2
+[26-Jul-2016 03:24:17 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/404.php on line 1
+[01-Aug-2016 18:33:01 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/archive.php on line 1
+[02-Aug-2016 21:10:21 America/Denver] PHP Fatal error:  Call to undefined function automatic_feed_links() in /home2/ocfoudor/public_html/wp-content/themes/delericon/functions.php on line 2
+[05-Aug-2016 21:53:35 America/Denver] PHP Fatal error:  Call to undefined function automatic_feed_links() in /home2/ocfoudor/public_html/wp-content/themes/delericon/functions.php on line 2
+[07-Aug-2016 09:24:26 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home2/ocfoudor/public_html/wp-content/themes/delericon/header.php on line 3
+[07-Aug-2016 09:24:26 America/Denver] PHP Fatal error:  Call to undefined function bloginfo() in /home2/ocfoudor/public_html/wp-content/themes/delericon/header.php on line 10
+[07-Aug-2016 09:24:27 America/Denver] PHP Fatal error:  Call to undefined function get_option() in /home2/ocfoudor/public_html/wp-content/themes/delericon/footer.php on line 3
+[10-Aug-2016 00:24:35 America/Denver] PHP Fatal error:  Call to undefined function automatic_feed_links() in /home2/ocfoudor/public_html/wp-content/themes/delericon/functions.php on line 2
+[10-Aug-2016 16:32:03 America/Denver] PHP Fatal error:  Call to undefined function automatic_feed_links() in /home2/ocfoudor/public_html/wp-content/themes/delericon/functions.php on line 2
+[18-Aug-2016 14:34:40 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[18-Aug-2016 20:10:29 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[19-Aug-2016 02:37:08 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[19-Aug-2016 08:14:21 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[19-Aug-2016 15:30:47 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7
+[20-Aug-2016 09:31:16 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/ocfoudor/public_html/wp-content/themes/delericon/index.php on line 7

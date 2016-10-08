@@ -28,10 +28,18 @@ services:
         MW_HOST: wiki
         PORT: 8142
   wordpress:
-    image: wordpress
+    build: wordpress/docker-wordpress
+    depends_on:
+      - mysql
     ports:
       - "8081:80"
+    volumes:
+      - ./wordpress/conf:/var/www-shared/html
+    links:
+      - mysql
     environment:
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_USER: root
       WORDPRESS_DB_PASSWORD: root
   nginx:
     build: nginx
