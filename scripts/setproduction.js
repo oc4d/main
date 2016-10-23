@@ -1,5 +1,5 @@
 var fs = require('fs');
-var json = JSON.parse(fs.readFileSync('secret/secret.json', 'utf8'));
+var json = JSON.parse(fs.readFileSync('secret/production.json', 'utf8'));
 var settings = fs.readFileSync('../wiki/conf/LocalSettings.php', 'utf8');
 
 var secret = '$wgDBname = "' + json.services.wiki.dbname + '";' + '\n';
