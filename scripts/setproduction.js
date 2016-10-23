@@ -9,6 +9,3 @@ secret += '$wgDBpassword = "' + json.services.mysql.password + '";';
 if (!settings.includes(secret)) {
     fs.appendFileSync('../wiki/conf/LocalSettings.php', '\n' + secret);
 }
-
-
-
