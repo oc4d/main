@@ -27,8 +27,8 @@ $wgMetaNamespace = "My_mediawiki";
 ## For more information on customizing the URLs
 ## (like /w/index.php/Page_title to /wiki/Page_title) please see:
 ## https://www.mediawiki.org/wiki/Manual:Short_URL
-$wgScriptPath = "";
-$wgScriptExtension = ".php";
+$wgScriptPath       = "/wiki";
+$wgUsePathInfo = false;
 
 ## The protocol and server name to use in fully-qualified URLs
 $dockerHost = getenv('DOCKER_HOST');
@@ -37,7 +37,7 @@ if (empty($dockerHost)) {
 } else {
 	$dockerHost = parse_url($dockerHost, PHP_URL_HOST);
 }
-$dockerHost = "http://" . $dockerHost . ":8080";
+$dockerHost = "http://" . $dockerHost . ":8090";
 $wgServer = $dockerHost;
 
 ## The relative URL path to the skins directory

@@ -34,14 +34,14 @@ services:
     environment:
       WORDPRESS_DB_PASSWORD: root
   nginx:
-    build: nginx
+    image: nginx:1.11.4
     depends_on:
       - wiki
     ports:
       - "8090:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
 volumes:
   mysql-data:
     external: true
-  nginx:
-    external: false
 
