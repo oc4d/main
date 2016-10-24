@@ -119,13 +119,6 @@ if [ -e "$WORDPRESS_SHARED/wp-config.php" ]; then
     ln -s "$WORDPRESS_SHARED/wp-config.php" wp-config.php
 fi
 
-# remove wp-content folder from WP container and link in the wp-content from our repo
-if [ -d "$WORDPRESS_SHARED/wp-content" ]; then
-    rm -fr wp-content
-    mkdir -p "$WORDPRESS_SHARED/wp-content"
-    ln -s "$WORDPRESS_SHARED/wp-content" wp-content
-fi
-
 TERM=dumb php -- "$WORDPRESS_DB_HOST" "$WORDPRESS_DB_USER" "$WORDPRESS_DB_PASSWORD" "$WORDPRESS_DB_NAME" <<'EOPHP'
 <?php
 // database might not exist, so let's try creating it (just to be safe)
