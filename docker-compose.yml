@@ -45,6 +45,7 @@ services:
     image: nginx:1.11.4
     depends_on:
       - wiki
+      - wordpress
     ports:
       - "8090:80"
     volumes:
