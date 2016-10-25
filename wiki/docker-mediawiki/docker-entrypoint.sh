@@ -31,10 +31,13 @@ if [ -d "$MEDIAWIKI_SHARED" ]; then
         ln -s "$MEDIAWIKI_SHARED/images" images
     fi
 
-    # If the files dir exists in wwww-shared and not in the container www/html
-    # Create files dir in container and symlink to files dir in www-shared
-    if [ -d "$MEDIAWIKI_SHARED/files" -a ! -d files ]; then
+    # If the files dir does not exist in wwww-shared, create it
+    if [ ! -d "$MEDIAWIKI_SHARED/files" ]; then
         mkdir -p "$MEDIAWIKI_SHARED/files"
+    fi
+
+    # If the path to files does not exist, link in the files directory from www-shared
+    if [ ! -e files ]; then
         ln -s "$MEDIAWIKI_SHARED/files" files
     fi
 fi
