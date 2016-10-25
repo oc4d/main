@@ -70,6 +70,17 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', false);
 
+$dockerHost = getenv('DOCKER_HOST');
+if (empty($dockerHost)) {
+    $dockerHost = "127.0.0.1";
+} else {
+    $dockerHost = parse_url($dockerHost, PHP_URL_HOST);
+}
+$siteUrl = "http://" . $dockerHost . ":8090";
+
+define('WP_HOME', $siteUrl);
+define('WP_SITEURL', $siteUrl);
+
 // If we're behind a proxy server and using HTTPS, we need to alert Wordpress of that fact
 // see also http://codex.wordpress.org/Administration_Over_SSL#Using_a_Reverse_Proxy
 if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {

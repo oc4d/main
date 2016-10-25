@@ -30,8 +30,7 @@ fi
 : ${WORDPRESS_SHARED:=/var/www-shared/html}
 # remove wp-config.php from WP container and link in the wp-config.php from repo
 if [ -e "$WORDPRESS_SHARED/wp-config.php" ]; then
-    rm wp-config.php
-    ln -s "$WORDPRESS_SHARED/wp-config.php" wp-config.php
+    ln -sf "$WORDPRESS_SHARED/wp-config.php" wp-config.php
 fi
 
 exec "$@"
