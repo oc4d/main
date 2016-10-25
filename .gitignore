@@ -1,4 +1,7 @@
 wiki/conf/images
+wiki/conf/files
 wiki/parsoid-data/settings.js
+
+wordpress/conf/wp-content
 
 .DS_Store

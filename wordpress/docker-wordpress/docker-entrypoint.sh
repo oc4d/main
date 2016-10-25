@@ -33,4 +33,9 @@ if [ -e "$WORDPRESS_SHARED/wp-config.php" ]; then
     ln -sf "$WORDPRESS_SHARED/wp-config.php" wp-config.php
 fi
 
+# if wp-content folder exists in shared, force in a symlinked folder to the wordpress container
+if [ -e "$WORDPRESS_SHARED/wp-content" ]; then
+    ln -sf "$WORDPRESS_SHARED/wp-content" wp-content
+fi
+
 exec "$@"
