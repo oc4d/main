@@ -40,7 +40,7 @@ RUN MEDIAWIKI_DOWNLOAD_URL="https://releases.wikimedia.org/mediawiki/$MEDIAWIKI_
     && gpg --verify mediawiki.tar.gz.sig \
     && tar -xf mediawiki.tar.gz -C /usr/src/mediawiki --strip-components=1
 
-RUN curl -o MobileFrontend.tgz https://extdist.wmflabs.org/dist/extensions/MobileFrontend-REL1_27-039b40b.tar.gz \
+RUN curl -o MobileFrontend.tgz https://extdist.wmflabs.org/dist/extensions/MobileFrontend-REL1_27-717861c.tar.gz \
     && tar -zxf MobileFrontend.tgz -C /usr/src/mediawiki/extensions
 
 RUN curl -o visualeditor.tgz https://extdist.wmflabs.org/dist/extensions/VisualEditor-REL1_27-9da5996.tar.gz \
