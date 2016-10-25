@@ -30,6 +30,13 @@ if [ -d "$MEDIAWIKI_SHARED" ]; then
         mkdir -p "$MEDIAWIKI_SHARED/images"
         ln -s "$MEDIAWIKI_SHARED/images" images
     fi
+
+    # If the files dir exists in wwww-shared and not in the container www/html
+    # Create files dir in container and symlink to files dir in www-shared
+    if [ -d "$MEDIAWIKI_SHARED/files" -a ! -d files ]; then
+        mkdir -p "$MEDIAWIKI_SHARED/files"
+        ln -s "$MEDIAWIKI_SHARED/files" files
+    fi
 fi
 
 # If the assets/oc4d (sym link) directory does not already exist
