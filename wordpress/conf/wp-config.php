@@ -70,7 +70,7 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', false);
 
-$dockerHost = getenv('DOCKER_HOST');
+$dockerHost = $_SERVER['HTTP_HOST'];
 if (empty($dockerHost)) {
     $dockerHost = "127.0.0.1";
 } else {

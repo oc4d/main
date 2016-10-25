@@ -31,7 +31,7 @@ $wgScriptPath       = "/wiki";
 $wgUsePathInfo = false;
 
 ## The protocol and server name to use in fully-qualified URLs
-$dockerHost = getenv('DOCKER_HOST');
+$dockerHost = $_SERVER['HTTP_HOST'];
 if (empty($dockerHost)) {
 	$dockerHost = "127.0.0.1";
 } else {
