@@ -70,12 +70,12 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', false);
 
-$dockerHost = $_SERVER['HTTP_HOST'];
 if (empty($dockerHost)) {
     $dockerHost = "127.0.0.1";
 } else {
     $dockerHost = parse_url($dockerHost, PHP_URL_HOST);
 }
+$dockerHost = $_SERVER['HTTP_HOST'];
 $siteUrl = "http://" . $dockerHost . ":8090";
 
 define('WP_HOME', $siteUrl);
