@@ -70,13 +70,13 @@ $table_prefix  = 'oc4d_';
  */
 define('WP_DEBUG', false);
 
-if (empty($dockerHost)) {
+/*if (empty($dockerHost)) {
     $dockerHost = "127.0.0.1";
 } else {
     $dockerHost = parse_url($dockerHost, PHP_URL_HOST);
-}
+}*/
 $dockerHost = $_SERVER['HTTP_HOST'];
-$siteUrl = "http://" . $dockerHost . ":8090";
+$siteUrl = "http://" . $dockerHost;
 
 define('WP_HOME', $siteUrl);
 define('WP_SITEURL', $siteUrl);
