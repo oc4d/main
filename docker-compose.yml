@@ -4,6 +4,7 @@ services:
     image: mysql:5.7
     volumes:
       - mysql-data:/var/lib/mysql
+      - ./mysql/mysql.conf:/etc/mysql/conf.d/oc4d.conf:ro
     environment:
       MYSQL_ROOT_PASSWORD: root
     restart: unless-stopped
