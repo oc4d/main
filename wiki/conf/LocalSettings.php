@@ -121,6 +121,10 @@ $wgRightsUrl = "";
 $wgRightsText = "";
 $wgRightsIcon = "";
 
+$wgFileExtensions = array( 'png', 'gif', 'jpg', 'jpeg', 'doc',
+    'docx', 'odt', 'pdf', 'txt'
+);
+
 # Path to the GNU diff3 utility. Used for conflict resolution.
 $wgDiff3 = "/usr/bin/diff3";
 
