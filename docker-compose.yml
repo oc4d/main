@@ -42,9 +42,6 @@ services:
       - mysql
     environment:
       DOCKER_HOST: $DOCKER_HOST
-      WORDPRESS_DB_HOST: mysql
-      WORDPRESS_DB_USER: root
-      WORDPRESS_DB_PASSWORD: root
     restart: unless-stopped
   nginx:
     image: nginx:1.11.4
