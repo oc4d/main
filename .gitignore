@@ -1,7 +1,9 @@
 wiki/conf/images
 wiki/conf/files
+wiki/conf/LocalSettings.overrides.php
 wiki/parsoid-data/settings.js
 
 wordpress/conf/wp-content
+wordpress/conf/wp-config.overrides.php
 
 .DS_Store

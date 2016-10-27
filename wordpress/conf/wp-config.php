@@ -14,24 +14,16 @@
  * @package WordPress
  */
 
+/** Absolute path to the WordPress directory. */
+if ( !defined('ABSPATH') ) {
+    define('ABSPATH', dirname(__FILE__) . '/');
+}
+
+
 // ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'wordpress');
-
-/** MySQL database username */
-define('DB_USER', 'root');
-
-/** MySQL database password */
-define('DB_PASSWORD', 'root');
-
-/** MySQL hostname */
-define('DB_HOST', 'mysql');
-
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
-
-/** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+$dbName = 'wordpress';
+$dbUser = 'root';
+$dbPassword = 'root';
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -61,6 +53,10 @@ define('NONCE_SALT',       'd7c710699f4c59b4490403c628e4381b37fbfe1a');
  */
 $table_prefix  = 'oc4d_';
 
+if (file_exists(ABSPATH . "wp-config.overrides.php")) {
+    include_once ABSPATH . "wp-config.overrides.php";
+}
+
 /**
  * For developers: WordPress debugging mode.
  *
@@ -81,17 +77,24 @@ $siteUrl = "http://" . $dockerHost;
 define('WP_HOME', $siteUrl);
 define('WP_SITEURL', $siteUrl);
 
+define('DB_NAME', $dbName);
+define('DB_USER', $dbUser);
+define('DB_PASSWORD', $dbPassword);
+define('DB_HOST', 'mysql');
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');
+
+unset($siteUrl);
+unset($dbName);
+unset($dbUser);
+unset($dbPassword);
+
 // If we're behind a proxy server and using HTTPS, we need to alert Wordpress of that fact
 // see also http://codex.wordpress.org/Administration_Over_SSL#Using_a_Reverse_Proxy
 if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
 	$_SERVER['HTTPS'] = 'on';
 }
 
-/* That's all, stop editing! Happy blogging. */
-
-/** Absolute path to the WordPress directory. */
-if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');

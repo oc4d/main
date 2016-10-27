@@ -128,6 +128,10 @@ $wgDiff3 = "/usr/bin/diff3";
 ## names, ie 'vector', 'monobook':
 $wgDefaultSkin = "vector";
 
+if (file_exists("$IP/LocalSettings.overrides.php")) {
+    include_once "$IP/LocalSettings.overrides.php";
+}
+
 # Enabled skins.
 # The following skins were automatically enabled:
 require_once "$IP/skins/CologneBlue/CologneBlue.php";
