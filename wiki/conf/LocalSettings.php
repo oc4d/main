@@ -59,6 +59,9 @@ $wgEnotifUserTalk = false; # UPO
 $wgEnotifWatchlist = false; # UPO
 $wgEmailAuthentication = true;
 
+# Make users confirm their emails before they can edit, to prevent spam
+$wgEmailConfirmToEdit = true;
+
 ## Database settings
 $wgDBtype = "mysql";
 $wgDBserver = "mysql";
