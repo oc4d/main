@@ -62,6 +62,8 @@ $wgEmailAuthentication = true;
 # Make users confirm their emails before they can edit, to prevent spam
 $wgEmailConfirmToEdit = true;
 
+$wgEnableBotPasswords = false;
+
 ## Database settings
 $wgDBtype = "mysql";
 $wgDBserver = "mysql";
