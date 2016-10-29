@@ -3,5 +3,6 @@ wiki/conf/files
 wiki/parsoid-data/settings.js
 
 wordpress/conf/wp-content
+wordpress/conf/images
 
 .DS_Store
