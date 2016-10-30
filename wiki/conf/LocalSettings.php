@@ -72,7 +72,7 @@ $wgDBuser = "root";
 $wgDBpassword = "root";
 
 # MySQL specific settings
-$wgDBprefix = "oc4d_";
+$wgDBprefix = "";
 
 # MySQL table options to use during installation or update
 $wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
