@@ -16,7 +16,7 @@ services:
       - "8080:80"
     volumes:
       - ./wiki/conf:/var/www-shared/html
-      - ./wiki/conf/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ./wiki/conf/php-overrides.ini:/usr/local/etc/php/conf.d/oc4d.ini
     links:
       - mysql
     environment:
