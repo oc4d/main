@@ -34,14 +34,14 @@ $dbPassword = 'root';
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'd5a4940d1a2e480782621d4bc80cb82468db004a');
-define('SECURE_AUTH_KEY',  'f6a0f04ffdd6bc0ecea501b84a7b9bea6bc6a556');
-define('LOGGED_IN_KEY',    'e9c93911d62ea4e12985a47f372eb83352ce985b');
-define('NONCE_KEY',        '5d5c115939c2b92a11c8db89f039896f4f8b7ab8');
-define('AUTH_SALT',        '1f54809088878b97326229075ec3f0ba3037b973');
-define('SECURE_AUTH_SALT', '06ca0a0cbe03a37b6474c111a4e14006522ad53e');
-define('LOGGED_IN_SALT',   'a51cfeac431e22dfcb5ad03049f51b872f79cb50');
-define('NONCE_SALT',       'd7c710699f4c59b4490403c628e4381b37fbfe1a');
+ $authKey = 'd5a4940d1a2e480782621d4bc80cb82468db004a';
+ $secureAuthKey = 'f6a0f04ffdd6bc0ecea501b84a7b9bea6bc6a556';
+ $loggedInKey = 'e9c93911d62ea4e12985a47f372eb83352ce985b';
+ $nonceKey = '5d5c115939c2b92a11c8db89f039896f4f8b7ab8';
+ $authSalt = '1f54809088878b97326229075ec3f0ba3037b973';
+ $secureAuthSalt = '06ca0a0cbe03a37b6474c111a4e14006522ad53e';
+ $loggedInSalt = 'a51cfeac431e22dfcb5ad03049f51b872f79cb50';
+ $nonceSalt = 'd7c710699f4c59b4490403c628e4381b37fbfe1a';
 
 /**#@-*/
 
@@ -76,18 +76,35 @@ $siteUrl = "http://" . $dockerHost;
 
 define('WP_HOME', $siteUrl);
 define('WP_SITEURL', $siteUrl);
+unset($siteUrl);
+
 
 define('DB_NAME', $dbName);
 define('DB_USER', $dbUser);
 define('DB_PASSWORD', $dbPassword);
+unset($dbName);
+unset($dbUser);
+unset($dbPassword);
 define('DB_HOST', 'mysql');
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
-unset($siteUrl);
-unset($dbName);
-unset($dbUser);
-unset($dbPassword);
+define('AUTH_KEY',         $authKey);
+define('SECURE_AUTH_KEY',  $secureAuthKey);
+define('LOGGED_IN_KEY',    $loggedInKey);
+define('NONCE_KEY',        $nonceKey);
+define('AUTH_SALT',        $authSalt);
+define('SECURE_AUTH_SALT', $secureAuthSalt);
+define('LOGGED_IN_SALT',   $loggedInSalt);
+define('NONCE_SALT',       $nonceSalt);
+unset($authKey);
+unset($secureAuthKey);
+unset($loggedInKey);
+unset($nonceKey);
+unset($authSalt);
+unset($secureAuthSalt);
+unset($loggedInSalt);
+unset($nonceSalt);
 
 // If we're behind a proxy server and using HTTPS, we need to alert Wordpress of that fact
 // see also http://codex.wordpress.org/Administration_Over_SSL#Using_a_Reverse_Proxy

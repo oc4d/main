@@ -39,10 +39,11 @@ function writeConfig(contents, path) {
 /***    MEDIAWIKI   ***/
 var mwLocalSettings = [
     '<?php',
-    '$wgDBname = "' + services.wiki.dbname + '";',
+    '$wgDBname = "' + services.wiki.dbName + '";',
     '$wgDBuser = "' + services.mysql.user + '";',
     '$wgDBpassword = "' + services.mysql.password + '";',
-    '$wgDBprefix = "' + services.wiki.dbprefix + '";',
+    '$wgDBprefix = "' + services.wiki.dbPrefix + '";',
+    '$wgSecretKey = "' + services.wiki.secretKey + '";',
 ].join('\n');
 var mwConfigFile = rootDir + '/wiki/conf/LocalSettings.overrides.php';
 writeConfig(mwLocalSettings, mwConfigFile);
@@ -50,10 +51,10 @@ writeConfig(mwLocalSettings, mwConfigFile);
 /***    WORDPRESS    ***/
 var wpLocalSettings = [
     '<?php',
-    '$dbName = "' + services.wordpress.dbname + '";',
+    '$dbName = "' + services.wordpress.dbName + '";',
     '$dbUser = "' + services.mysql.user + '";',
     '$dbPassword = "' + services.mysql.password + '";',
-    '$table_prefix = "' + services.wordpress.dbprefix + '";',
+    '$table_prefix = "' + services.wordpress.dbPrefix + '";',
 ].join('\n');
 var wpConfigFile = rootDir + '/wordpress/conf/wp-config.overrides.php';
 writeConfig(wpLocalSettings, wpConfigFile);
