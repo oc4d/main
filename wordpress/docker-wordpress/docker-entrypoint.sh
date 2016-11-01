@@ -39,4 +39,9 @@ if [ -e "$WORDPRESS_SHARED/wp-content" ]; then
     ln -sf "$WORDPRESS_SHARED/wp-content" wp-content
 fi
 
+# if images folder exists in wordpress shared dir, add synlinked folder to wordpress docker container
+if [ -e "$WORDPRESS_SHARED/images" ]; then
+	ln -sf "$WORDPRESS_SHARED/images" images
+fi
+
 exec "$@"

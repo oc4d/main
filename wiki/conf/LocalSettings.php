@@ -59,6 +59,11 @@ $wgEnotifUserTalk = false; # UPO
 $wgEnotifWatchlist = false; # UPO
 $wgEmailAuthentication = true;
 
+# Make users confirm their emails before they can edit, to prevent spam
+$wgEmailConfirmToEdit = true;
+
+$wgEnableBotPasswords = false;
+
 ## Database settings
 $wgDBtype = "mysql";
 $wgDBserver = "mysql";
@@ -120,6 +125,10 @@ $wgRightsPage = ""; # Set to the title of a wiki page that describes your licens
 $wgRightsUrl = "";
 $wgRightsText = "";
 $wgRightsIcon = "";
+
+$wgFileExtensions = array( 'png', 'gif', 'jpg', 'jpeg', 'doc',
+    'docx', 'odt', 'pdf', 'txt'
+);
 
 # Path to the GNU diff3 utility. Used for conflict resolution.
 $wgDiff3 = "/usr/bin/diff3";
