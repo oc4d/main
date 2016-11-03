@@ -22,6 +22,9 @@ if [ -d "$MEDIAWIKI_SHARED" ]; then
     if [ -e "$MEDIAWIKI_SHARED/LocalSettings.php" -a ! -e LocalSettings.php ]; then
         ln -s "$MEDIAWIKI_SHARED/LocalSettings.php" LocalSettings.php
     fi
+    if [ -e "$MEDIAWIKI_SHARED/LocalSettings.overrides.php" -a ! -e LocalSettings.overrides.php ]; then
+        ln -s "$MEDIAWIKI_SHARED/LocalSettings.overrides.php" LocalSettings.overrides.php
+    fi
 
     # If the images directory only contains a README, then link it to
     # $MEDIAWIKI_SHARED/images, creating the shared directory if necessary

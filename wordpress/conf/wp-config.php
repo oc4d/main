@@ -14,24 +14,16 @@
  * @package WordPress
  */
 
+/** Absolute path to the WordPress directory. */
+if ( !defined('ABSPATH') ) {
+    define('ABSPATH', dirname(__FILE__) . '/');
+}
+
+
 // ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'wordpress');
-
-/** MySQL database username */
-define('DB_USER', 'root');
-
-/** MySQL database password */
-define('DB_PASSWORD', 'root');
-
-/** MySQL hostname */
-define('DB_HOST', 'mysql');
-
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
-
-/** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+$dbName = 'wordpress';
+$dbUser = 'root';
+$dbPassword = 'root';
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -42,14 +34,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'd5a4940d1a2e480782621d4bc80cb82468db004a');
-define('SECURE_AUTH_KEY',  'f6a0f04ffdd6bc0ecea501b84a7b9bea6bc6a556');
-define('LOGGED_IN_KEY',    'e9c93911d62ea4e12985a47f372eb83352ce985b');
-define('NONCE_KEY',        '5d5c115939c2b92a11c8db89f039896f4f8b7ab8');
-define('AUTH_SALT',        '1f54809088878b97326229075ec3f0ba3037b973');
-define('SECURE_AUTH_SALT', '06ca0a0cbe03a37b6474c111a4e14006522ad53e');
-define('LOGGED_IN_SALT',   'a51cfeac431e22dfcb5ad03049f51b872f79cb50');
-define('NONCE_SALT',       'd7c710699f4c59b4490403c628e4381b37fbfe1a');
+ $authKey = 'd5a4940d1a2e480782621d4bc80cb82468db004a';
+ $secureAuthKey = 'f6a0f04ffdd6bc0ecea501b84a7b9bea6bc6a556';
+ $loggedInKey = 'e9c93911d62ea4e12985a47f372eb83352ce985b';
+ $nonceKey = '5d5c115939c2b92a11c8db89f039896f4f8b7ab8';
+ $authSalt = '1f54809088878b97326229075ec3f0ba3037b973';
+ $secureAuthSalt = '06ca0a0cbe03a37b6474c111a4e14006522ad53e';
+ $loggedInSalt = 'a51cfeac431e22dfcb5ad03049f51b872f79cb50';
+ $nonceSalt = 'd7c710699f4c59b4490403c628e4381b37fbfe1a';
 
 /**#@-*/
 
@@ -60,6 +52,10 @@ define('NONCE_SALT',       'd7c710699f4c59b4490403c628e4381b37fbfe1a');
  * prefix. Only numbers, letters, and underscores please!
  */
 $table_prefix  = 'oc4d_';
+
+if (file_exists(ABSPATH . "wp-config.overrides.php")) {
+    include_once ABSPATH . "wp-config.overrides.php";
+}
 
 /**
  * For developers: WordPress debugging mode.
@@ -80,6 +76,35 @@ $siteUrl = "http://" . $dockerHost;
 
 define('WP_HOME', $siteUrl);
 define('WP_SITEURL', $siteUrl);
+unset($siteUrl);
+
+
+define('DB_NAME', $dbName);
+define('DB_USER', $dbUser);
+define('DB_PASSWORD', $dbPassword);
+unset($dbName);
+unset($dbUser);
+unset($dbPassword);
+define('DB_HOST', 'mysql');
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');
+
+define('AUTH_KEY',         $authKey);
+define('SECURE_AUTH_KEY',  $secureAuthKey);
+define('LOGGED_IN_KEY',    $loggedInKey);
+define('NONCE_KEY',        $nonceKey);
+define('AUTH_SALT',        $authSalt);
+define('SECURE_AUTH_SALT', $secureAuthSalt);
+define('LOGGED_IN_SALT',   $loggedInSalt);
+define('NONCE_SALT',       $nonceSalt);
+unset($authKey);
+unset($secureAuthKey);
+unset($loggedInKey);
+unset($nonceKey);
+unset($authSalt);
+unset($secureAuthSalt);
+unset($loggedInSalt);
+unset($nonceSalt);
 
 // If we're behind a proxy server and using HTTPS, we need to alert Wordpress of that fact
 // see also http://codex.wordpress.org/Administration_Over_SSL#Using_a_Reverse_Proxy
@@ -87,11 +112,6 @@ if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROT
 	$_SERVER['HTTPS'] = 'on';
 }
 
-/* That's all, stop editing! Happy blogging. */
-
-/** Absolute path to the WordPress directory. */
-if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');

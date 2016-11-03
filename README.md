@@ -6,6 +6,12 @@ You need to install the following tools in your development environment:
 * docker
 * docker-compose
 
+# Production dependencies
+
+* docker
+* docker-compose
+* node
+
 # Running the services
 
 In development, simply run:
