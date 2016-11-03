@@ -43,4 +43,4 @@ fi
 
 echo ""
 echo "Starting the services"
-docker-compose up $COMPOSE_PARAMS
+docker-compose up --build $COMPOSE_PARAMS
