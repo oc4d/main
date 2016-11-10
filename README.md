@@ -24,10 +24,24 @@ In production and other environments, run:
 
 * By default, the containers will run detached in production, and attached to the current terminal in development.
 
-To stop the containers:
-
-    docker-compose stop
-
 To continually view the logs when the containers are running detached, run:
 
     docker-compose logs -f
+
+# Stopping the services
+
+In development, go to your bash terminal window, where the running containers are attached, and press 'ctrl + C'
+
+In production and other environments run:
+
+    ENVIRONMENT=PRODUCTION ./stop.sh
+
+# Re-building the services
+
+In development, simply run:
+
+    ./build.sh
+
+In production and other environments, run:
+
+    ENVIRONMENT=PRODUCTION ./build.sh
