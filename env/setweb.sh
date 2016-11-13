@@ -5,10 +5,10 @@
 
 case $ENVIRONMENT in
     DEV)
-        export WEB_PORT=8090 && COMPOSE_PARAMS=''
+        source "env/dev.sh"
         ;;
     PRODUCTION)
-        export WEB_PORT=80 && COMPOSE_PARAMS='-d'
+        source "env/production.sh"
         ;;
     *)
         >&2 echo "Unknown environment: $ENVIRONMENT"
