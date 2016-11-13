@@ -1,1 +1,2 @@
 export WEB_PORT=8090
+export COMPOSE_PARAMS=''

@@ -5,28 +5,7 @@ if [ "$(docker volume ls -q -f name=mysql-data)" == "" ]; then
     docker volume create --name=mysql-data
 fi
 
-# Default to development environment
-: ${ENVIRONMENT:=DEV}
-
-COMPOSE_PARAMS=''
-
-case $ENVIRONMENT in
-    DEV)
-        VAR_FILE='dev.sh'
-        ;;
-    PRODUCTION)
-        VAR_FILE='production.sh'
-        COMPOSE_PARAMS='-d'
-        ;;
-    *)
-        >&2 echo "Unknown environment: $ENVIRONMENT"
-        exit 127
-        ;;
-esac
-
-echo "Running environment: $ENVIRONMENT"
-
-source "env/$VAR_FILE"
+source "env/setweb.sh"
 
 if [ $ENVIRONMENT != "DEV" ]; then
     # Url to the secrets repo for the current environment
