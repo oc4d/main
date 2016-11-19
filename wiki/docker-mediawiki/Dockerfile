@@ -46,6 +46,9 @@ RUN curl -o MobileFrontend.tgz https://extdist.wmflabs.org/dist/extensions/Mobil
 RUN curl -o visualeditor.tgz https://extdist.wmflabs.org/dist/extensions/VisualEditor-REL1_27-9da5996.tar.gz \
     && tar -zxf visualeditor.tgz -C /usr/src/mediawiki/extensions
 
+RUN curl -o youtube.tgz https://extdist.wmflabs.org/dist/extensions/YouTube-REL1_27-555d66a.tar.gz \
+    && tar -zxf youtube.tgz -C /usr/src/mediawiki/extensions
+
 COPY apache/mediawiki.conf /etc/apache2/
 RUN echo Include /etc/apache2/mediawiki.conf >> /etc/apache2/apache2.conf
 
