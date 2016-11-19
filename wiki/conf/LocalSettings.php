@@ -156,7 +156,12 @@ require_once "$IP/skins/Vector/Vector.php";
 require_once "$IP/extensions/MobileFrontend/MobileFrontend.php";
 $wgMFAutodetectMobileView = true;
 
+# Enable WYSIWYG editor extension
 require_once "$IP/extensions/VisualEditor/VisualEditor.php";
+
+# Enable YouTube extension
+wfLoadExtension( 'YouTube' );
+
 // Enable by default for everybody
 $wgDefaultUserOptions['visualeditor-enable'] = 1;
 // Don't allow users to disable it
