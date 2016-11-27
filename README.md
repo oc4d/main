@@ -24,9 +24,9 @@ In production and other environments, run:
 
 * By default, the containers will run detached in production, and attached to the current terminal in development.
 
-To continually view the logs when the containers are running detached, run:
+In production, to continually view the logs when the containers are running detached, run:
 
-    docker-compose logs -f
+    ENVIRONMENT=PRODUCTION ./logs.sh
 
 # Stopping the services
 
