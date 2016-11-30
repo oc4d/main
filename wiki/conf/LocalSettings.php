@@ -155,6 +155,7 @@ require_once "$IP/skins/Vector/Vector.php";
 # Enable mobile friendly extension
 require_once "$IP/extensions/MobileFrontend/MobileFrontend.php";
 $wgMFAutodetectMobileView = true;
+$wgMinervaEnableSiteNotice = true;
 
 # Enable WYSIWYG editor extension
 require_once "$IP/extensions/VisualEditor/VisualEditor.php";
