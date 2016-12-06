@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Create external mysql volume on first start
 if [ "$(docker volume ls -q -f name=mysql-data)" == "" ]; then
     docker volume create --name=mysql-data
