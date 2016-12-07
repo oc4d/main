@@ -47,14 +47,3 @@ var mwLocalSettings = [
 ].join('\n');
 var mwConfigFile = rootDir + '/wiki/conf/LocalSettings.overrides.php';
 writeConfig(mwLocalSettings, mwConfigFile);
-
-/***    WORDPRESS    ***/
-var wpLocalSettings = [
-    '<?php',
-    '$dbName = "' + services.wordpress.dbName + '";',
-    '$dbUser = "' + services.mysql.user + '";',
-    '$dbPassword = "' + services.mysql.password + '";',
-    '$table_prefix = "' + services.wordpress.dbPrefix + '";',
-].join('\n');
-var wpConfigFile = rootDir + '/wordpress/conf/wp-config.overrides.php';
-writeConfig(wpLocalSettings, wpConfigFile);
