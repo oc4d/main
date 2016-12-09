@@ -13,7 +13,7 @@ services:
     depends_on:
       - mysql
     ports:
-      - "8080:80"
+      - "$WEB_PORT:80"
     volumes:
       - ./wiki/conf:/var/www-shared/html
       - ./wiki/conf/php-overrides.ini:/usr/local/etc/php/conf.d/oc4d.ini
@@ -31,29 +31,6 @@ services:
     environment:
         MW_HOST: wiki
         PORT: 8142
-    restart: unless-stopped
-  wordpress:
-    build: wordpress/docker-wordpress
-    depends_on:
-      - mysql
-    ports:
-      - "8081:80"
-    volumes:
-      - ./wordpress/conf:/var/www-shared/html
-    links:
-      - mysql
-    environment:
-      DOCKER_HOST: $DOCKER_HOST
-    restart: unless-stopped
-  nginx:
-    image: nginx:1.11.4
-    depends_on:
-      - wiki
-      - wordpress
-    ports:
-      - "$WEB_PORT:80"
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
     restart: unless-stopped
 volumes:
   mysql-data:
