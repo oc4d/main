@@ -25,7 +25,8 @@ RUN set -x; \
     apt-get update \
     && apt-get install -y --no-install-recommends sendmail \
     && sendmailconfig \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && echo HOSTNAME >> /etc/hostname
 
 RUN service apache2 restart
 
