@@ -21,6 +21,15 @@ RUN set -x; \
     && apt-get install -y --no-install-recommends imagemagick \
     && rm -rf /var/lib/apt/lists/*
 
+RUN set -x; \
+    apt-get update \
+    && apt-get install -y --no-install-recommends sendmail \
+    && sendmailconfig \
+    && rm -rf /var/lib/apt/lists/* \
+    && echo HOSTNAME >> /etc/hostname
+
+RUN service apache2 restart
+
 RUN a2enmod rewrite
 
 # https://www.mediawiki.org/keys/keys.txt

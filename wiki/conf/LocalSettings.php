@@ -51,6 +51,7 @@ $wgLogo = "$wgScriptPath/resources/assets/oc4d/OC4D_Logo.png";
 
 $wgEnableEmail = true;
 $wgEnableUserEmail = true; # UPO
+$wgEmailAuthentication = true;
 
 $wgEmergencyContact = "apache@127.0.0.1";
 $wgPasswordSender = "apache@127.0.0.1";
